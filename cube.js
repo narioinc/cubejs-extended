@@ -31,11 +31,6 @@ function shouldCompress (req, res) {
 
 module.exports = {  
       initApp: (app) => {
-        /*app.use((req, res, next) => {
-          res.locals.cspNonce = crypto.randomBytes(16).toString("hex");
-          next();
-        });
-        });*/
         app.use(require('express-status-monitor')())
         app.use(helmet({
           contentSecurityPolicy: false
